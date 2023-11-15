@@ -2,8 +2,12 @@
   <div class="todo-list">
     <h1>Todo List</h1>
     <div>
-      <input type="text" placeholder="Add a new task..." />
-      <button type="submit">
+      <input
+        (ngModel)="(todo.Title)"
+        type="text"
+        placeholder="Add a new task..."
+      />
+      <button (click)="addTodo()" type="submit">
         Add
         <!-- {{ todo.Id ? "Update" : "Add" }} -->
       </button>
